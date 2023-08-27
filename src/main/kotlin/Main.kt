@@ -13,13 +13,13 @@ fun main(args: Array<String>) {
         println("Setze deinen zug:")
         if(gameManager.fields.size % 2 == 0) {
             readlnOrNull()?.let {
-                if(gameManager.addX(it.toInt()) == Response.FIELDNOTEMPTY){
+                if(gameManager.addX(it.toInt(), "X") == Response.FIELDNOTEMPTY){
                     println("Zug nicht verfügbar!")
                 }
             }
         }else {
             readlnOrNull()?.let {
-                if(gameManager.addO(it.toInt()) == Response.FIELDNOTEMPTY){
+                if(gameManager.addX(it.toInt(), "O") == Response.FIELDNOTEMPTY){
                     println("Zug nicht verfügbar!")
                 }
             }
